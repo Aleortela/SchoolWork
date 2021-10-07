@@ -1,0 +1,22 @@
+
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main(){
+
+    // #ifndef ONLINE_JUDGE
+    // freopen("input.txt", "r", stdin);
+    // freopen("output.txt", "w", stdout);
+    // #endif
+
+    int b_init, b_end, b_save, a_init, a_save;
+    cin >> b_init >> b_end >> b_save >> a_init >> a_save;
+
+    int b_total = (b_end - b_init) * b_save;
+    int years = 0;
+    while(++years * a_save <= b_total);
+    cout << years + a_init;
+
+    return 0;
+}

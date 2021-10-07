@@ -1,0 +1,26 @@
+public static void main(String[] args) {
+       int numerator= 0;
+       int denominator= 0;
+       int wholeNumber= 0;
+       int fraction= 0;
+       Scanner kbd= new Scanner(System.in);
+       boolean zeroFrac = false;
+
+       while (!zeroFrac)
+       {
+           numerator= kbd.nextInt();
+           denominator= kbd.nextInt();
+           if(denominator == 0)
+           {
+            zeroFrac = true;
+           }
+           else
+           {
+
+               wholeNumber= numerator/denominator;
+               fraction= numerator%denominator;
+               System.out.println(wholeNumber+" "+fraction+" / "+denominator);
+           }
+       }
+   }
+}

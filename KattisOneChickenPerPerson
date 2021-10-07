@@ -1,0 +1,35 @@
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args) {
+        int numberGuests= 0;
+        int piecesChicken= 0;
+        int giveTake= 0;
+        Scanner kbd= new Scanner(System.in);
+        boolean chickenCounter = false;
+
+        while (!chickenCounter)
+        {
+            int numberGuests= kbd.nextInt();
+            int piecesChicken= kbd.nextInt();
+            giveTake= (numberGuests - piecesChicken)*-1;
+
+            if(numberGuests >= piecesChicken)
+            {
+                if((numberGuests - piecesChicken) == 1)
+                {
+                    System.out.println("Dr. Chaz will have "+(Math.abs(giveTake))+" piece of chicken left over!");
+                }
+                else
+                {
+                    System.out.println("Dr. Chaz will have "+(Math.abs(giveTake))+" pieces of chicken left over!");
+                }
+            }
+            else
+            {
+                System.out.println("Dr. Chaz needs "+(Math.abs(giveTake))+" more pieces of chicken!");
+                chickenCounter = true;
+            }
+        }
+    }
+}
